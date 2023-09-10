@@ -1,0 +1,12 @@
+# Ignore artifacts:
+build
+coverage
+
+# Next.js
+.next
+
+# TypeScript Configuration
+tsconfig.json
+
+# PNPM package manager
+pnpm-lock.yaml
