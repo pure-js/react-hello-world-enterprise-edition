@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/react": "18.2.21",
@@ -19,11 +21,27 @@
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.4.1",
+    "@storybook/addon-interactions": "^7.4.1",
+    "@storybook/addon-links": "^7.4.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.1",
+    "@storybook/builder-vite": "7.4.1",
+    "@storybook/nextjs": "^7.4.1",
+    "@storybook/react": "^7.4.1",
+    "@storybook/testing-library": "^0.2.0",
     "@types/node": "20.6.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-storybook": "^0.6.13",
     "prettier": "3.0.3",
+    "storybook": "^7.4.1",
     "typescript": "5.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
