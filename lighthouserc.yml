@@ -1,8 +1,7 @@
 ci:
   collect:
     numberOfRuns: 3
-    startServerCommand: bun run preview
-    url: ['http://localhost']
+    # url: ['http://localhost']
     staticDistDir: './build'
     isSinglePageApplication: true
   assert:
