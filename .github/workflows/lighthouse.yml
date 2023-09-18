@@ -1,0 +1,20 @@
+name: Lighthouse CI
+
+on: [push]
+
+env:
+  VITE_GROWTH_BOOK_KEY: 'some-key'
+
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile && bun install -g @lhci/cli@0.12.x
+      - run: bun run build
+      - run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
