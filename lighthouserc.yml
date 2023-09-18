@@ -3,7 +3,7 @@ ci:
     numberOfRuns: 3
     startServerCommand: bun run preview
     url: ['http://localhost']
-    staticDistDir: './dist'
+    staticDistDir: './build'
     isSinglePageApplication: true
   assert:
     assertions:
