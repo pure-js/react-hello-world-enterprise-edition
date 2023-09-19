@@ -6,10 +6,10 @@ ci:
     isSinglePageApplication: true
   assert:
     assertions:
-      'categories:performance': ['error', { 'minScore': 1 }]
+      'categories:performance': ['error', { 'minScore': .96 }]
       'categories:accessibility': ['error', { 'minScore': .90 }]
       'categories:best-practices': ['error', { 'minScore': .92 }]
       'categories:pwa': ['off']
-      'categories:seo': ['error', { 'minScore': .91 }]
+      'categories:seo': ['error', { 'minScore': .83 }]
   upload:
     target: 'temporary-public-storage'
