@@ -1,13 +1,22 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { GrowthBookProvider } from '@growthbook/growthbook-react';
+
+import { growthbook } from './growthbook';
 
 type ProvidersProps = React.PropsWithChildren<{}>;
 
 export default function Providers({ children }: ProvidersProps) {
   const [queryClient] = useState(() => new QueryClient());
 
+  useEffect(() => {
+    growthbook.loadFeatures();
+  }, []);
+
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <GrowthBookProvider growthbook={growthbook}>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </GrowthBookProvider>
   );
 }

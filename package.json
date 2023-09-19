@@ -1,7 +1,6 @@
 {
   "name": "react-hello-world-enterprise-edition",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,6 +10,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@growthbook/growthbook-react": "0.18.0",
     "@tanstack/react-query": "4.35.3",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
