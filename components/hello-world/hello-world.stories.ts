@@ -15,10 +15,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedIn: Story = {
+export const LangdEn: Story = {
   args: {
     name: 'Jane Doe',
+    lang: 'en',
   },
 };
 
-export const LoggedOut: Story = {};
+export const LangEs: Story = {
+  args: {
+    name: 'Jane Doe',
+    lang: 'es',
+  },
+};
