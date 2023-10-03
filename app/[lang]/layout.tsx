@@ -3,6 +3,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import Providers from './providers';
+import type { Locales } from '@/types/locales';
+
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }];
+}
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,11 +18,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: {
+    lang: Locales;
+  };
 }) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>

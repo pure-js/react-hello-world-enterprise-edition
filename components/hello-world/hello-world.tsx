@@ -2,10 +2,17 @@ import Image from 'next/image';
 
 import Earth from '@/public/earth.svg';
 import { Title } from './hello-world.css';
-import { getDictionary } from '../../app/dictionaries';
+import { getDictionary } from '@/dictionaries/index';
+import type { Locales } from '@/types/locales';
 
-export const HelloWorld = async ({ name = 'World' }) => {
-  const dict = await getDictionary('en');
+export const HelloWorld = async ({
+  name,
+  lang = 'en',
+}: {
+  name: string;
+  lang: Locales;
+}) => {
+  const dict = await getDictionary(lang);
   return (
     <>
       <h1 className={Title}>
