@@ -1,7 +1,14 @@
 import Image from 'next/image';
 import { HelloWorld } from '@/components/hello-world';
+import { Locales } from '@/types/locales';
+import { getDictionary } from '@/dictionaries/index';
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locales };
+}) {
+  const dict = await getDictionary(lang);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -40,7 +47,7 @@ export default function Home() {
         />
       </div>
 
-      <HelloWorld />
+      <HelloWorld name={dict.world} lang={lang} />
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
