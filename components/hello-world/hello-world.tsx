@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
 import Earth from '@/public/earth.svg';
-import { Title } from './hello-world.css';
 import { getDictionary } from '@/dictionaries/index';
 import type { Locales } from '@/types/locales';
+
+import { Title } from './hello-world.css';
 
 export const HelloWorld = async ({
   name,
