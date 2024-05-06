@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@growthbook/growthbook-react':
-    specifier: 0.18.0
-    version: 0.18.0(react@18.2.0)
+    specifier: 1.0.0
+    version: 1.0.0(react@18.2.0)
   '@tanstack/react-query':
     specifier: 4.35.3
     version: 4.35.3(react-dom@18.2.0)(react@18.2.0)
@@ -2094,21 +2094,21 @@ packages:
     resolution: {integrity: sha512-ou3elfqG/hZsbmF4bxeJhPHIf3G2pm0ujc39hYEZrfVqt7Vk/Zji6CXc3W0pmYM8BW1g40U+akTl9DKZhFhInQ==}
     dev: true
 
-  /@growthbook/growthbook-react@0.18.0(react@18.2.0):
-    resolution: {integrity: sha512-Nuyn6j3nmSNN7hMcc4OEl0IhMH2nQ40zVXDYuw0q4IgfNN3gWvA8UrUeqK/p1vevBKtErXNZmETIRYe4iVoNeg==}
+  /@growthbook/growthbook-react@1.0.0(react@18.2.0):
+    resolution: {integrity: sha512-zralTkrvDs8Dwjelr81V9wEV4oTPSTa96qY361UKx/nQVkjDyVuOgxZMtPpkmd05yng5lqxihqjd8pUYlRCk1Q==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16.8.0-0 || ^17.0.0-0 || ^18.0.0-0
     dependencies:
-      '@growthbook/growthbook': 0.28.0
+      '@growthbook/growthbook': 1.0.0
       react: 18.2.0
     dev: false
 
-  /@growthbook/growthbook@0.28.0:
-    resolution: {integrity: sha512-RnrP29yHfL12nmAxtPbyHlY70BSB2f/LIOrYaBhqn2oBNdeuAxwGt9FO40dDJh0W+opaG5EbiPvZUxsy8J0aAw==}
+  /@growthbook/growthbook@1.0.0:
+    resolution: {integrity: sha512-qfVhZcubsGjJI8oNjZp5g69N7c+NMxWl3WS05Sa93V6qNjE9Uz2PZqj7Qj+6iTEOZ1ignmEsIBJEKfdlpa9INg==}
     engines: {node: '>=10'}
     dependencies:
-      dom-mutator: 0.5.0
+      dom-mutator: 0.6.0
     dev: false
 
   /@humanwhocodes/config-array@0.11.11:
@@ -3846,8 +3846,6 @@ packages:
       webpack: ^5.0.0
     peerDependenciesMeta:
       '@next/font':
-        optional: true
-      '@storybook/addon-actions':
         optional: true
       typescript:
         optional: true
@@ -6317,8 +6315,8 @@ packages:
       utila: 0.4.0
     dev: true
 
-  /dom-mutator@0.5.0:
-    resolution: {integrity: sha512-bbeX8HWE8JGzraFgbVBX4ws2g3heZFuTtrleQBuN7huy+7n2n7etSuVnot3/1z3jdY2MiwuvoS4Ep1UT2rrGBw==}
+  /dom-mutator@0.6.0:
+    resolution: {integrity: sha512-iCt9o0aYfXMUkz/43ZOAUFQYotjGB+GNbYJiJdz4TgXkyToXbbRy5S6FbTp72lRBtfpUMwEc1KmpFEU4CZeoNg==}
     engines: {node: '>=10'}
     dev: false
 
